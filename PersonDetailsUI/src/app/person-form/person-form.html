@@ -1,0 +1,35 @@
+<div class="form-container">
+    <form [formGroup]="personForm" >
+        <h2>User Details Form</h2>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Enter your name" formControlName="name" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Address</mat-label>
+          <input matInput placeholder="Enter your address" formControlName="address" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>City</mat-label>
+          <input matInput placeholder="Enter your city" formControlName="city" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Contact</mat-label>
+          <input matInput placeholder="Enter your contact number" formControlName="contact" />
+        </mat-form-field>
+
+        <button class="submited" mat-raised-button color="primary" (click)="onSubmit()" [disabled]="personForm.invalid">
+          Submit
+        </button>
+        <button mat-raised-button color="primary" (click)="routeToView()">
+          View Reigtered Details
+        </button>
+      </form>
+</div>
+
+
+

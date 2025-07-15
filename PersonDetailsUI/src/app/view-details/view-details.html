@@ -1,0 +1,28 @@
+<div class="main-container">
+
+
+<h2>User Submitted Details</h2>
+<div class="details-container">
+      @for(data of details; track data){
+        
+      <mat-card>
+            <mat-card-content>
+                <p><mat-icon>person</mat-icon> <strong>Name : </strong> {{ data.name }}</p>
+                <p><mat-icon>home</mat-icon> <strong>Address : </strong> {{ data.address }}</p>
+                <p><mat-icon>location_city</mat-icon> <strong>City : </strong> {{ data.city }}</p>
+                <p><mat-icon>phone</mat-icon> <strong>Contact : </strong> {{ data.contact }}</p>
+                <mat-icon class="delete-icon" (click)="removeEmployee(data?.id)">delete</mat-icon>
+            </mat-card-content>
+        </mat-card>
+       
+    }
+</div>
+
+<div class="register-wrapper">
+  <button mat-raised-button color="accent" class="register-btn" (click)="goToRegister()">
+    <mat-icon>person_add</mat-icon>
+    Register a New User
+  </button>
+</div>
+
+</div>
