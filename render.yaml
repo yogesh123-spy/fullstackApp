@@ -2,7 +2,7 @@ services:
   - type: web
     name: fullstack-backend
     env: docker
-    rootDir: backend
+    rootDir: PersonDetails
     plan: free
     dockerfilePath: ../backend/Dockerfile
 
