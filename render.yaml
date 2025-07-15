@@ -1,13 +1,13 @@
 services:
   - type: web
-    name: PersonDetails
+    name: fullstack-backend
     env: docker
     rootDir: backend
     plan: free
     dockerfilePath: ../backend/Dockerfile
 
   - type: web
-    name: PersonDetails
+    name: fullstack-frontend
     env: node
     plan: free
     rootDir: frontend
