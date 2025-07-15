@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: PersonDetails
+    env: java
+    plan: free
+    buildCommand: ./mvnw clean install
+    startCommand: java -jar backend/target/*.jar
+    rootDir: backend
+
+  - type: static
+    name: fullstack-frontend
+    env: static
+    plan: free
+    buildCommand: npm install && npm run build --prefix frontend
+    staticPublishPath: frontend/dist/frontend
+    rootDir: .
