@@ -7,9 +7,9 @@ services:
     startCommand: java -jar backend/target/*.jar
     rootDir: backend
 
-  - type: static
+  - type: web
     name: fullstack-frontend
-    env: static
+    env: node
     plan: free
     buildCommand: npm install && npm run build --prefix frontend
     staticPublishPath: frontend/dist/frontend
