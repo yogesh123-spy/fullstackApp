@@ -10,6 +10,6 @@ services:
     name: fullstack-frontend
     env: node
     plan: free
-    rootDir: frontend
+    rootDir: PersonDetailsUI
     buildCommand: npm install && npm run build
     startCommand: npx serve -s dist/frontend
